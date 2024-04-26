@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glucose Data Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+</head>
+<body>
+    <!-- title -->
+    <header class="main-header">
+        <h1>Glucose Monitoring Dashboard</h1>
+    </header>
+    <!-- time filter control panel -->
+    <section class="control-panel">
+        <div class="slider-container">
+            <label for="timeFilter">Filter by Time:</label>
+            <input type="checkbox" id="timeFilterEnabled">
+            <input type="range" id="timeFilter" min="0" max="23" step="1" value="12">
+            <span id="timeLabel">12:00</span>
+        </div>
+    </section>
+    <!-- chart graph -->
+    <section class="chart-container">
+        <canvas id="glucoseChart"></canvas>
+    </section>
+    <!-- key -->
+    <section class="key">
+        <h2>Key</h2>
+        <!-- x = time, y = glucose level -->
+        <div class="key-item">
+            <div class="key-color" style="background-color: #ff0000;"></div>
+            <p>Y: Glucose Level (mg/dL)</p>
+        </div>
+        <div class="key-item">
+            <div class="key-color" style="background-color: #0000ff;"></div>
+            <p>X: Time (24-hour format)</p>
+        </div>
+        <div class="key-item">
+            <div class="key-color" style="background-color: #00ff00;"></div>
+            <p>Data Range: February 12, 2024 - April 25, 2024</p>
+        </div>
+        <div class="key-item">
+            <div class="key-color" style="background-color: #00ff00;"></div>
+            <p>*NOTE: Filtering by a date often produces sharp peaks and valleys. This is due to the pull rate of the sensor, common sensor errors, and
+                simply not having enough collected data yet. </p>
+        </div>
+
+    </section>
+    <!-- chart footer -->
+    <footer class="main-footer">
+        <p>Data collected using a Dexcom G6 sensor system.</p>
+    </footer>
+    <!-- about section -->
+    <section class="about">
+        <h2>About</h2>
+        <p>Welcome to my glucose monitoring dashboard! This contains real-time data from my Dexcom G6 Continuous Glucose Monitoring (CGM) system. 
+            A CGM is a device that continuously tracks glucose (sugar) levels constantly. 
+            This particular one sends updates every 6 minutes to a receiver or smartphone app, providing a detailed picture of my glucose levels to help manage my Type 1 diabetes.</p>
+
+        <p>Blood sugar, or glucose, is the main sugar found in your blood. It comes from the carbohydrates in the foods and drinks you consume, and is your body's main source of energy.
+            Type 1 diabetes is an autoimmune condition where the pancreas no longer produces insulin — a hormone that allows 
+            your body to break down these sugar cells to serve as an energy source.
+            Managing Type 1 diabetes requires careful monitoring of blood sugar levels to ensure they remain within a target range.
+            A CGM system like the Dexcom G6 is an immense help for the management of my condition, as it helps track glucose levels more accurately and less invasively than traditional blood sugar testing methods.</p>
+    
+        <p>On this dashboard, you'll find a line chart that visualizes my glucose readings over time. Use the time filter control panel to explore fluctuations in my glucose levels at specific hours of the day. Adjust the slider to select an hour, and the chart will update to display the glucose levels for that hour across all recorded days.</p>
+        
+        <p>By sharing my data and experiences, I hope to offer insight into the daily management of Type 1 diabetes, and demonstrate the benefits of modern technology in diabetes care. Whether you are someone living with diabetes, a caregiver, or are simply interested in learning more, I at least hope you find this data I've produced just living my life to be interesting!</p>
+    </section>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

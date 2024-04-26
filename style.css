@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.main-header, .main-footer {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    font-size: 1.5em;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.main-footer {
+    padding: 10px 20px;
+}
+
+
+.key {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 960px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.key h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.key-item {
+    display: flex;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.about {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 960px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.about h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.about p {
+    margin: 10px 0;
+}
+
+.control-panel, .chart-container {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="range"] {
+    margin: 0 15px;
+    width: 70%;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 600px) {
+    .main-header, .control-panel, .chart-container {
+        max-width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .control-panel {
+        flex-direction: column;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+}
